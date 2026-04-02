@@ -1,12 +1,10 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
 
-  // eslint-disable-next-line no-undef
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs") // Update the URL to your backend
+    fetch("http://localhost:5000/api/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err));

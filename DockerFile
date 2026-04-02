@@ -1,0 +1,8 @@
+FROM node:24.11.1
+
+LABEL maintainer="ziad18@cse.pstu.ac.bd"
+
+WORKDIR /app
+
+COPY package*.json ./
+
